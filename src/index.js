@@ -1,10 +1,9 @@
+require('dotenv/config');
 const puppeteer = require("puppeteer");
 const getVideoTitles = require("./utils/getVideoTitles");
 
-const url =
-  "https://www.youtube.com/playlist?list=PLTPg64KdGgYgr5Tz4xUr1bQLEI_ze7SNB";
-const elements =
-  ".ytd-playlist-video-renderer h3.ytd-playlist-video-renderer span#video-title";
+const url = process.env.YOUTUBE_URL;
+const elements = process.env.YOUTUBE_DOM_ELEMENT;
 
 (async () => {
   const browser = await puppeteer.launch();
