@@ -2,7 +2,7 @@ require('dotenv/config');
 
 const fs = require('fs');
 const puppeteer = require("puppeteer");
-const getVideos = require("./utils/getVideoTitles");
+const getVideos = require("./utils/getVideos");
 
 const url = process.env.YOUTUBE_URL;
 const elements = process.env.YOUTUBE_DOM_ELEMENT;
